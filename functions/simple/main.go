@@ -3,7 +3,8 @@ package main
 import (
   "encoding/json"
   "github.com/apex/go-apex"
-  "github.com/ChimeraCoder/anaconda"
+  // Commenting out anaconda until I'm actually using the Twitter library
+  // "github.com/ChimeraCoder/anaconda"
 )
 
 type message struct {
