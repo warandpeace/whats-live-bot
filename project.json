@@ -1,0 +1,8 @@
+{
+  "name": "whats-live-bot",
+  "description": "A simple Twitter bot that gives you a random live Twitch stream.",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::956700324492:role/whats-live-bot_lambda_function",
+  "environment": {}
+}
