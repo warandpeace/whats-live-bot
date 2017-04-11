@@ -37,8 +37,7 @@ func init() {
 	anaconda.SetConsumerSecret(cred.CtwitterSecret)
 }
 
-// It's the main function! Where it does... stuff! (Note: From Apex Golang Example)
-// TODO: Fucking everything. Replace this at bare minimum with a hello world tweet to get started.
+// It's the main function! Where it does... stuff! Right now it tweets 'Hello World'. I'm a professional.
 func main() {
 	apex.HandleFunc(func(event json.RawMessage, ctx *apex.Context) (interface{}, error) {
 		api := anaconda.NewTwitterApi(cred.CtwitterToken, cred.CtwitterTokenSecret)
