@@ -41,17 +41,15 @@ func init() {
 func main() {
 	apex.HandleFunc(func(event json.RawMessage, ctx *apex.Context) (interface{}, error) {
 		api := anaconda.NewTwitterApi(cred.CtwitterToken, cred.CtwitterTokenSecret)
-		var t string
-		t = "Hello World"
-		// TODO: Fix my dumb bad logging, because this produces %t literally
-		os.Stderr.WriteString("Posting tweet: %t\n")
+		var tweet string
+		tweet = "Hello World"
+		log.Printf("Attempting to post tweet: %s", tweet)
 
 		v := url.Values{}
-		_, err := api.PostTweet(t, v)
+		_, err := api.PostTweet(tweet, v)
 		if err != nil {
-			// TODO: Fix my dumb bad logging, because this produces %t literally
-			os.Stderr.WriteString("Error posting tweet: %t\n")
+			log.Printf("Error posting tweet: %s", tweet)
 		}
-		return t, nil
+		return tweet, nil
 	})
 }
